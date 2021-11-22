@@ -1,3 +1,6 @@
+# @note When we destroy the related article, it's using dependent:
+#       :delete for the relationship.  That means no before/after
+#       destroy callbacks will be called on this object.
 class Mention < ApplicationRecord
   belongs_to :user
   belongs_to :mentionable, polymorphic: true
