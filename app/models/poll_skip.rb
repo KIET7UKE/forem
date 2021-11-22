@@ -1,3 +1,6 @@
+# @note When we destroy the related poll, it's using dependent:
+#       :delete for the relationship.  That means no before/after
+#       destroy callbacks will be called on this object.
 class PollSkip < ApplicationRecord
   belongs_to :poll
   belongs_to :user
